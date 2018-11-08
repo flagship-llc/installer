@@ -29,6 +29,9 @@ tower
 postgres
 sequel-pro
 imageoptim
+visual-studio-code
+alfred
+ngrok
 )
 
 for GUIBREW in ${GUIBREWS[@]};
@@ -36,3 +39,15 @@ do
   brew cask install $GUIBREW -y --appdir=~/Applications
 done
 
+# ngrok connect company account
+while getopts e: OPT
+do
+  case $OPT in
+    e) pass=$OPTARG
+       ;;
+  esac
+done
+eval "/usr/local/bin/ngrok authtoken $pass"
+
+# rbenv install latest
+eval "rbenv install $(rbenv install -l | grep -v - | tail -1)"

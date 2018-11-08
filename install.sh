@@ -50,4 +50,13 @@ done
 eval "/usr/local/bin/ngrok authtoken $pass"
 
 # rbenv install latest
-eval "rbenv install $(rbenv install -l | grep -v - | tail -1)"
+LATEST_RUBY=$(rbenv install -l | grep -v - | tail -1)
+eval "rbenv install $LATEST_RUBY"
+eval "rbenv global $LATEST_RUBY && rbenv rehash"
+
+# settings postgresql
+eval "ln -sfv /usr/local/opt/postgresql/*.plist ~/Library/LaunchAgents && launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist"
+
+# settings redis
+eval "ln -sfv /usr/local/opt/redis/*.plist ~/Library/LaunchAgents && launchctl load ~/Library/LaunchAgents/homebrew.mxcl.redis.plist"
+

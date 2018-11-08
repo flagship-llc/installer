@@ -1,3 +1,5 @@
 #!/bin/bash
 
-echo $1
+param=($QUERY_STRING)
+
+echo "$param[0]"

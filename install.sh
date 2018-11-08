@@ -40,14 +40,8 @@ do
 done
 
 # ngrok connect company account
-while getopts e: OPT
-do
-  case $OPT in
-    e) pass=$OPTARG
-       ;;
-  esac
-done
-eval "/usr/local/bin/ngrok authtoken $pass"
+TOKEN=$1
+eval "/usr/local/bin/ngrok authtoken $TOKEN"
 
 # rbenv install latest
 LATEST_RUBY=$(rbenv install -l | grep -v - | tail -1)

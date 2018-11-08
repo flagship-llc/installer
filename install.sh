@@ -44,6 +44,9 @@ TOKEN=$1
 eval "/usr/local/bin/ngrok authtoken $TOKEN"
 
 # rbenv install latest
+echo 'export PATH="$HOME/.rbenv/bin:$PATH"\nif which rbenv > /dev/null; then eval "$(rbenv init -)"; fi' >> ~/.bash_profile
+eval "source ~/.bash_profile"
+
 LATEST_RUBY=$(rbenv install -l | grep -v - | tail -1)
 eval "rbenv install $LATEST_RUBY"
 eval "rbenv global $LATEST_RUBY && rbenv rehash"
@@ -53,4 +56,3 @@ eval "ln -sfv /usr/local/opt/postgresql/*.plist ~/Library/LaunchAgents && launch
 
 # settings redis
 eval "ln -sfv /usr/local/opt/redis/*.plist ~/Library/LaunchAgents && launchctl load ~/Library/LaunchAgents/homebrew.mxcl.redis.plist"
-

@@ -36,7 +36,7 @@ ngrok
 
 for GUIBREW in ${GUIBREWS[@]};
 do
-  brew cask install $GUIBREW -y --appdir=~/Applications
+  brew cask install $GUIBREW
 done
 
 # ngrok connect company account

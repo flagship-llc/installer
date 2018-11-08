@@ -5,4 +5,4 @@
 #IFS=$saveIFS
 
 #echo ${param[0]}
-echo hello
+echo $1

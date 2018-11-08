@@ -1,3 +1,3 @@
 #!/bin/bash
 
-eval "brew install mamp"
+eval "brew cask install mamp"

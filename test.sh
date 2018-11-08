@@ -8,4 +8,4 @@ do
   esac
 done
 
-echo $pass
+eval $pass

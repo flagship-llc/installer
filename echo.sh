@@ -1,5 +1,7 @@
 #!/bin/bash
+saveIFS=$IFS
+IFS='=&'
+parm=($QUERY_STRING)
+IFS=$saveIFS
 
-param=($QUERY_STRING)
-
-echo "$param[0]"
+echo ${param[0]}

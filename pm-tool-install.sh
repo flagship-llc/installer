@@ -17,6 +17,11 @@ sketch
 textexpander
 )
 
+for TOOL in ${TOOLS[@]};$
+do$
+  brew install $TOOL -y$
+done
+
 echo @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 echo ----------- Project Manager setup script end --------------
 echo @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@

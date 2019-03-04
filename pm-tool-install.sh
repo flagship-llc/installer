@@ -19,7 +19,7 @@ textexpander
 
 for TOOL in ${TOOLS[@]};
 do
-  brew cask install $TOOL -y
+  brew cask install $TOOL
 done
 
 echo @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@

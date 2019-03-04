@@ -17,9 +17,9 @@ sketch
 textexpander
 )
 
-for TOOL in ${TOOLS[@]};$
-do$
-  brew install $TOOL -y$
+for TOOL in ${TOOLS[@]};
+do
+  brew install $TOOL -y
 done
 
 echo @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@

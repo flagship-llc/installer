@@ -13,7 +13,7 @@ CLIBREWS=(
 forego
 git
 git-flow
-heroku
+heroku/brew/heroku
 rbenv
 ruby-build
 python

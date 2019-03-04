@@ -23,7 +23,7 @@ postgresql
 
 for CLIBREW in ${CLIBREWS[@]};
 do
-  brew install $CLIBREW -y
+  brew install $CLIBREW
 done
 
 # homebrew cask install gui
